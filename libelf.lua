@@ -1,6 +1,4 @@
 function libelf()
-   print("LOADING libelf")
-
    homepage    ("http://www.mr511.de")
    .url        ("http://www.mr511.de/software/libelf-%version%.tar.gz")
    .version    ("%version%")
