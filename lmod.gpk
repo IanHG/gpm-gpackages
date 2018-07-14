@@ -18,7 +18,7 @@ prerequisite = {}
 -- Build section
 build = {
    -- Source of package
-   source = "https://github.com/TACC/Lmod",
+   source = "git://github.com/TACC/Lmod.git",
    source_type = "git",
    -- Build command
    command = [[
