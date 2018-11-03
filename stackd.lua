@@ -1,12 +1,10 @@
-function cutee()
+function stackd()
    -- General stuff
-   homepage   ("https://github.com/IanHG/cutee")
-   url        ("git://github.com/IanHG/cutee.git")
+   homepage   ("https://github.com/IanHG/stackd")
+   url        ("git://github.com/IanHG/stackd.git")
    version    ("%version%")
    description([[
-      cutee : Cpp Unit TEsting Environment
-
-      A minimalistic unit testing framework for C++.
+      stackd : Debug tool for printing stacktraces.
    ]])
    
    -- Dependecies
@@ -23,10 +21,10 @@ function cutee()
    -- Lmod
    lmod()
       .help  ([[This module loads %name% v. %version%.]])
-      .family("cutee")
+      .family("stackd")
       .group ("tools")
 
    symbol()
-      .add("name"   , "cutee")
+      .add("name"   , "stackd")
       .add("version", "1.0.0")
 end
