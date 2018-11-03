@@ -6,7 +6,7 @@ function libelf()
       This is a description of the package.
    ]])
    
-   .autotools( "--enable-extended-format")
+   .autoconf( "--enable-extended-format")
 
    --.file("lol.txt", [[This is some content]])
 

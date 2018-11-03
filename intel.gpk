@@ -72,8 +72,8 @@ ACTIVATION_LICENSE_FILE=<pkgbuild>/license.lic
 #CLUSTER_INSTALL_MACHINES_FILE=filepat
 
 # Intel(R) Software Improvement Program opt-in, valid values are: {yes, no}
-#PHONEHOME_SEND_USAGE_DATA=no
-INTEL_SW_IMPROVEMENT_PROGRAM_CONSENT=no
+PHONEHOME_SEND_USAGE_DATA=no
+#INTEL_SW_IMPROVEMENT_PROGRAM_CONSENT=no
 
 # Perform validation of digital signatures of RPM files, valid values are: {yes, no}
 SIGNING_ENABLED=yes

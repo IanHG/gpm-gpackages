@@ -7,7 +7,7 @@ GROMACS
 
 -- Definition section
 definition = {
-   pkgname = "gromacs-gpu-avx2",
+   pkgname = "gromacs-avx2-noopenmp",
    pkggroup = "gromacs",
    pkgfamily = "gromacs",
 }
@@ -21,13 +21,12 @@ build = {
    source = "http://ftp.gromacs.org/pub/gromacs/gromacs-<pkgversion>.tar.gz",
    -- Build command
    command = [[
-      # Build gromacs
-      mkdir -p build >& /dev/null
+      mkdir build
       cd build
       
       export CC=icc
       export CXX=icpc
-      cmake -DCUDA_TOOLKIT_ROOT_DIR=$CUDA_HOME -DGPU_DEPLOYMENT_KIT_ROOT_DIR=$CUDA_HOME -DCMAKE_INSTALL_PREFIX=<pkginstall> -DGMX_SIMD=AVX_256 -DGMX_MPI=ON -DGMX_GPU=ON -DGMX_OPENMP=ON -DGMX_BUILD_OWN_FFTW=ON -DGMX_USE_NVML=ON -DGMX_CUDA_TARGET_COMPUTE=60 ../
+      cmake -DCMAKE_INSTALL_PREFIX=<pkginstall> -DGMX_SIMD=AVX_256 -DGMX_MPI=ON -DGMX_GPU=OFF -DGMX_BUILD_OWN_FFTW=ON -DGMX_OPENMP=OFF ../
       
       make -j<nprocesses>
       make install
