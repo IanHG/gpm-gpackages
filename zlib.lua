@@ -25,5 +25,5 @@ function zlib()
    -- Custom symbols
    symbol()
       .add("name"   , "zlib")
-      .add("version", "<version>")
+      .add("version", "1.2.11")
 end
