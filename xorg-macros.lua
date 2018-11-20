@@ -1,32 +1,31 @@
 ---
--- This package builds libX11
+-- This package builds xorg-macros
 --
-function libX11()
+function xorg_macros()
    -- Generel
    homepage    ("<homepage>")
-   .url        ("https://github.com/mirror/libX11/archive/libX11-%version%.tar.gz")
+   .url        ("https://github.com/freedesktop/xorg-macros/archive/util-macros-%version%.tar.gz")
    .version    ("%version%")
    .description([[
       <description>
    ]])
-
-   dependson("xorg-macros@1.19.1", "load")
    
    -- Build
    build()
       .shell("./autogen.sh")
-      .configure("--disable-dependency-tracking")
+      .configure()
       .make()
       .makeinstall()
    
    -- Lmod
    lmod()
       .help  ([[This module loads %name% v. %version%.]])
-      .family("libx11")
+      .family("xorg_macros")
       .group ("tools")
+      .prepend_path("ACLOCAL_PATH", "share/aclocal")
    
    -- Custom symbols
    symbol()
-      .add("name"   , "libX11")
-      .add("version", "1.6.7")
+      .add("name"   , "xorg-macros")
+      .add("version", "1.19.1")
 end
