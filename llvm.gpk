@@ -29,7 +29,7 @@ build = {
       # build llvm
       mkdir build || true
       cd build
-      cmake ../. -DCMAKE_INSTALL_PREFIX=<pkginstall> || true
+      cmake ../. -DCMAKE_INSTALL_PREFIX=<pkginstall> -DCMAKE_BUILD_TYPE=Release || true
       make -j<nprocesses>
       make -j<nprocesses> omp
       make install
